@@ -105,7 +105,7 @@
   .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 700; color: var(--gold); line-height: 1; }
   .stat-label { font-family: 'Bebas Neue', sans-serif; font-size: 9px; letter-spacing: 3px; color: var(--muted); margin-top: 4px; }
 
-  /* ─── SECTION ─── */
+  /* ─── SECTIONS ─── */
   .section-wrap { padding: 80px 40px; max-width: 1100px; margin: 0 auto; }
   .section-header { text-align: center; margin-bottom: 20px; }
   .section-eyebrow {
@@ -139,41 +139,21 @@
     box-shadow: 0 24px 80px rgba(0,0,0,0.8), 0 0 60px rgba(201,168,76,0.07);
   }
 
-  /* 16:9 native video — fills card completely */
+  /* 16:9 YouTube embed container */
   .video-wrap {
     position: relative;
     width: 100%;
     padding-top: 56.25%;
-    background: #050403;
+    background: #000;
     overflow: hidden;
   }
 
-  .video-wrap video {
+  .video-wrap iframe {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  /* Gold shimmer on hover */
-  .video-wrap::after {
-    content: '';
-    position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(201,168,76,0.04) 0%, transparent 60%);
-    pointer-events: none;
-    opacity: 0; transition: opacity 0.4s ease;
-  }
-  .video-card:hover .video-wrap::after { opacity: 1; }
-
-  /* Loop badge */
-  .loop-badge {
-    position: absolute; bottom: 14px; right: 14px;
-    font-family: 'Bebas Neue', sans-serif; font-size: 9px; letter-spacing: 3px;
-    color: var(--gold); background: rgba(0,0,0,0.65);
-    border: 1px solid rgba(201,168,76,0.3); border-radius: 20px;
-    padding: 4px 12px; pointer-events: none;
+    border: none;
   }
 
   /* Card footer */
@@ -188,18 +168,6 @@
     padding: 5px 18px; border-radius: 20px;
     border: 1px solid rgba(201,168,76,0.3); color: var(--gold); background: var(--gold-dim);
   }
-
-  /* Sound toggle button */
-  .sound-btn {
-    position: absolute; top: 14px; right: 14px;
-    font-family: 'Bebas Neue', sans-serif; font-size: 9px; letter-spacing: 3px;
-    color: var(--gold); background: rgba(0,0,0,0.65);
-    border: 1px solid rgba(201,168,76,0.3); border-radius: 20px;
-    padding: 5px 14px; cursor: pointer;
-    transition: background 0.3s ease, border-color 0.3s ease;
-    z-index: 10;
-  }
-  .sound-btn:hover { background: rgba(201,168,76,0.15); border-color: var(--gold); }
 
   .sep { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.2), transparent); }
 
@@ -249,18 +217,18 @@
       <div class="section-eyebrow">01 — Aerial</div>
       <h2 class="section-title">The <em>Estate</em> From Above</h2>
     </div>
-    <p class="hint">VIDEOS <span>AUTOPLAY</span> &amp; <span>LOOP</span> · CLICK <span>🔊</span> FOR SOUND</p>
+    <p class="hint">VIDEOS <span>AUTOPLAY</span> · <span>LOOP</span> CONTINUOUSLY · SOUND OFF BY DEFAULT</p>
 
     <div class="video-stack">
 
-      <!-- Drone 1 -->
+      <!-- Drone 1: kEJ5dgpjmXk -->
       <div class="video-card">
         <div class="video-wrap">
-          <video autoplay muted loop playsinline preload="auto">
-            <source src="drone1.mp4" type="video/mp4">
-          </video>
-          <button class="sound-btn" onclick="toggleSound(this)">🔇 MUTED</button>
-          <span class="loop-badge">↺ LOOPING</span>
+          <iframe
+            src="https://www.youtube.com/embed/kEJ5dgpjmXk?autoplay=1&mute=1&loop=1&playlist=kEJ5dgpjmXk&controls=1&modestbranding=1&rel=0&playsinline=1"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+          </iframe>
         </div>
         <div class="card-footer">
           <div><div class="card-label">Drone #1</div><div class="card-scene">The Gate Reveal</div></div>
@@ -268,14 +236,14 @@
         </div>
       </div>
 
-      <!-- Drone 2 -->
+      <!-- Drone 2: B7ATg_07Eqc -->
       <div class="video-card">
         <div class="video-wrap">
-          <video autoplay muted loop playsinline preload="auto">
-            <source src="drone2.mp4" type="video/mp4">
-          </video>
-          <button class="sound-btn" onclick="toggleSound(this)">🔇 MUTED</button>
-          <span class="loop-badge">↺ LOOPING</span>
+          <iframe
+            src="https://www.youtube.com/embed/B7ATg_07Eqc?autoplay=1&mute=1&loop=1&playlist=B7ATg_07Eqc&controls=1&modestbranding=1&rel=0&playsinline=1"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+          </iframe>
         </div>
         <div class="card-footer">
           <div><div class="card-label">Drone #2</div><div class="card-scene">Empire From Above</div></div>
@@ -296,18 +264,18 @@
       <div class="section-eyebrow">02 — The Experience</div>
       <h2 class="section-title"><em>Rebecca</em> at 801</h2>
     </div>
-    <p class="hint">VIDEOS <span>AUTOPLAY</span> &amp; <span>LOOP</span> · CLICK <span>🔊</span> FOR SOUND</p>
+    <p class="hint">VIDEOS <span>AUTOPLAY</span> · <span>LOOP</span> CONTINUOUSLY · SOUND OFF BY DEFAULT</p>
 
     <div class="video-stack">
 
-      <!-- Scene 1 -->
+      <!-- Prompt 1: zKkLgEfxTco -->
       <div class="video-card">
         <div class="video-wrap">
-          <video autoplay muted loop playsinline preload="auto">
-            <source src="prompt1.mp4" type="video/mp4">
-          </video>
-          <button class="sound-btn" onclick="toggleSound(this)">🔇 MUTED</button>
-          <span class="loop-badge">↺ LOOPING</span>
+          <iframe
+            src="https://www.youtube.com/embed/zKkLgEfxTco?autoplay=1&mute=1&loop=1&playlist=zKkLgEfxTco&controls=1&modestbranding=1&rel=0&playsinline=1"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+          </iframe>
         </div>
         <div class="card-footer">
           <div><div class="card-label">Scene 1</div><div class="card-scene">The Gate</div></div>
@@ -315,14 +283,14 @@
         </div>
       </div>
 
-      <!-- Scene 2 -->
+      <!-- Prompt 2: jyB3LA9k7SI -->
       <div class="video-card">
         <div class="video-wrap">
-          <video autoplay muted loop playsinline preload="auto">
-            <source src="prompt2.mp4" type="video/mp4">
-          </video>
-          <button class="sound-btn" onclick="toggleSound(this)">🔇 MUTED</button>
-          <span class="loop-badge">↺ LOOPING</span>
+          <iframe
+            src="https://www.youtube.com/embed/jyB3LA9k7SI?autoplay=1&mute=1&loop=1&playlist=jyB3LA9k7SI&controls=1&modestbranding=1&rel=0&playsinline=1"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+          </iframe>
         </div>
         <div class="card-footer">
           <div><div class="card-label">Scene 2</div><div class="card-scene">The Compound</div></div>
@@ -330,14 +298,14 @@
         </div>
       </div>
 
-      <!-- Scene 3 -->
+      <!-- Prompt 3: 4L8GjtSOH8o -->
       <div class="video-card">
         <div class="video-wrap">
-          <video autoplay muted loop playsinline preload="auto">
-            <source src="prompt3.mp4" type="video/mp4">
-          </video>
-          <button class="sound-btn" onclick="toggleSound(this)">🔇 MUTED</button>
-          <span class="loop-badge">↺ LOOPING</span>
+          <iframe
+            src="https://www.youtube.com/embed/4L8GjtSOH8o?autoplay=1&mute=1&loop=1&playlist=4L8GjtSOH8o&controls=1&modestbranding=1&rel=0&playsinline=1"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+          </iframe>
         </div>
         <div class="card-footer">
           <div><div class="card-label">Scene 3</div><div class="card-scene">The Pool</div></div>
@@ -345,14 +313,14 @@
         </div>
       </div>
 
-      <!-- Scene 5 -->
+      <!-- Prompt 5: oSPHtDBjbws -->
       <div class="video-card">
         <div class="video-wrap">
-          <video autoplay muted loop playsinline preload="auto">
-            <source src="prompt5.mp4" type="video/mp4">
-          </video>
-          <button class="sound-btn" onclick="toggleSound(this)">🔇 MUTED</button>
-          <span class="loop-badge">↺ LOOPING</span>
+          <iframe
+            src="https://www.youtube.com/embed/oSPHtDBjbws?autoplay=1&mute=1&loop=1&playlist=oSPHtDBjbws&controls=1&modestbranding=1&rel=0&playsinline=1"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+          </iframe>
         </div>
         <div class="card-footer">
           <div><div class="card-label">Scene 5</div><div class="card-scene">The Theater</div></div>
@@ -360,14 +328,14 @@
         </div>
       </div>
 
-      <!-- Scene 6 -->
+      <!-- Prompt 6: Q7uv3Nq6KVI -->
       <div class="video-card">
         <div class="video-wrap">
-          <video autoplay muted loop playsinline preload="auto">
-            <source src="prompt6.mp4" type="video/mp4">
-          </video>
-          <button class="sound-btn" onclick="toggleSound(this)">🔇 MUTED</button>
-          <span class="loop-badge">↺ LOOPING</span>
+          <iframe
+            src="https://www.youtube.com/embed/Q7uv3Nq6KVI?autoplay=1&mute=1&loop=1&playlist=Q7uv3Nq6KVI&controls=1&modestbranding=1&rel=0&playsinline=1"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+          </iframe>
         </div>
         <div class="card-footer">
           <div><div class="card-label">Scene 6</div><div class="card-scene">The Kitchen</div></div>
@@ -387,36 +355,16 @@
 </footer>
 
 <script>
-  // Sound toggle — click to unmute/mute individual videos
-  function toggleSound(btn) {
-    const video = btn.closest('.video-wrap').querySelector('video');
-    video.muted = !video.muted;
-    btn.textContent = video.muted ? '🔇 MUTED' : '🔊 SOUND ON';
-    // Mute all other videos when one is turned on
-    if (!video.muted) {
-      document.querySelectorAll('video').forEach(v => {
-        if (v !== video) {
-          v.muted = true;
-          const b = v.closest('.video-wrap').querySelector('.sound-btn');
-          if (b) b.textContent = '🔇 MUTED';
-        }
-      });
-    }
-  }
-
   // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         e.target.style.opacity = '1';
         e.target.style.transform = 'translateY(0)';
-        // Start playing when card enters view
-        const vid = e.target.querySelector('video');
-        if (vid) vid.play().catch(() => {});
         observer.unobserve(e.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.05 });
 
   document.querySelectorAll('.video-card').forEach((card, i) => {
     card.style.transition = `opacity 0.8s ease ${i * 0.1}s, transform 0.8s ease ${i * 0.1}s, border-color 0.4s ease, box-shadow 0.4s ease`;
